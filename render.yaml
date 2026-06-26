@@ -7,6 +7,3 @@ services:
     # Standard Next.js build and start commands
     buildCommand: npm install && npm run build
     startCommand: npm run start
-    envVars:
-      - key: NODE_ENV
-        value: production
