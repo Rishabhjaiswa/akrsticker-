@@ -5,5 +5,5 @@ services:
     # Use the free plan for this simple static-like site
     plan: free
     # Standard Next.js build and start commands
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm run start
