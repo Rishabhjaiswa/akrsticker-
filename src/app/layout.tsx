@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NexGen Tech - Verified Partner",
+  title: "aakr - Verified Partner",
   description: "Pioneering digital solutions for modern businesses. We craft premium software experiences that elevate your brand and drive results.",
 };
 
