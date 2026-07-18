@@ -5,11 +5,11 @@ services:
     # Use the free plan for this simple static-like site
     plan: free
     # Standard Next.js build and start commands
-    buildCommand: npm install --include=dev && npx prisma generate && npx prisma db push --accept-data-loss && npx tsx prisma/seed.ts && npm run build
+    buildCommand: npm install --include=dev && npx prisma generate && npx prisma db push && npx tsx prisma/seed.ts && npm run build
     startCommand: npm run start
     envVars:
       - key: DATABASE_URL
-        value: file:./dev.db
+        sync: false
       - key: NEXTAUTH_SECRET
         generateValue: true
       - key: NEXTAUTH_URL
