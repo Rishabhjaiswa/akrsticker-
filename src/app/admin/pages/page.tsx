@@ -16,10 +16,20 @@ export default async function PagesList({
   const pages = await prisma.authenticationPage.findMany({
     where: {
       OR: [
-        { productName: { contains: query } },
-        { companyName: { contains: query } },
-        { productId: { contains: query } },
+        { productName: { contains: query, mode: "insensitive" } },
+        { companyName: { contains: query, mode: "insensitive" } },
+        { productId: { contains: query, mode: "insensitive" } },
       ],
+    },
+    select: {
+      id: true,
+      uuid: true,
+      companyName: true,
+      brandName: true,
+      productName: true,
+      productId: true,
+      verificationStatus: true,
+      createdAt: true,
     },
     orderBy: { createdAt: "desc" },
   });

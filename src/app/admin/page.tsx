@@ -8,6 +8,15 @@ export default async function AdminDashboard() {
   const totalPages = await prisma.authenticationPage.count();
   const recentPages = await prisma.authenticationPage.findMany({
     take: 5,
+    select: {
+      id: true,
+      uuid: true,
+      companyName: true,
+      productName: true,
+      productId: true,
+      verificationStatus: true,
+      createdAt: true,
+    },
     orderBy: { createdAt: "desc" },
   });
 
