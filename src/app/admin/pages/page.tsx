@@ -86,13 +86,9 @@ export default async function PagesList({
                 <tr key={page.id} className="hover:bg-slate-50 transition-colors group">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      {page.logo ? (
-                        <img src={page.logo} alt="" className="w-10 h-10 rounded-lg object-cover border border-slate-200" />
-                      ) : (
-                        <div className="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-sm">
-                          {page.productName.charAt(0)}
-                        </div>
-                      )}
+                      <div className="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-sm">
+                        {page.productName.charAt(0)}
+                      </div>
                       <div className="ml-4">
                         <div className="text-sm font-semibold text-slate-900">{page.productName}</div>
                         <div className="text-xs text-slate-500 mt-0.5">ID: {page.productId}</div>
